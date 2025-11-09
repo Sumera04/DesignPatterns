@@ -1,0 +1,31 @@
+Singleton Design Pattern — Short Interview Answer
+	
+	The Singleton Pattern is a Creational Design Pattern that ensures only one instance of a class exists throughout the application and provides a global access point to it.
+
+#Key Idea:
+	Restrict class instantiation by making the constructor private and exposing a static method that returns the same instance every time.
+
+#Example:
+	A DatabaseConnection or Logger class where having multiple instances could cause conflicts or inefficiency.
+
+#Principles Used:
+
+	1. Controlled object creation
+	2. Global point of access (via a static method)
+	3. Can use lazy initialization for resource efficiency
+
+
+# When to Use:
+	When exactly one instance of a class is required (e.g., configuration manager, thread pool, logging service).
+	
+#Pros:
+	1. Ensures single shared instance
+	2. Saves system resources
+	3. Provides global access point
+
+#Cons:
+
+	1. Difficult to test (introduces global state)
+	2. Can violate Single Responsibility Principle
+	3.May cause concurrency issues if not thread-safe
+
