@@ -1,0 +1,32 @@
+Creational Design Patterns
+
+#Definition
+
+	Creational design patterns deals with object creation mechanisms, 
+	trying to create objects in a controlled and flexible way.
+
+	They abstract the instantiation process, making a system independent of how its objects are created, 
+	composed, and represented.
+
+#Objective
+
+	1. Control object creation to avoid complex instantiation code scattered across the system.
+	2. Promote flexibility by decoupling client code from concrete classes.
+	3. Enable scalability by supporting easy addition of new types of objects.
+	
+#Real-World Analogy
+
+	Think of a meal preparation system in a restaurant:
+	
+	1. A Factory decides what type of meal to prepare based on the order.
+	2. A Builder assembles the meal step by step.
+	3. A Singleton ensures there is only one cashier managing payments.
+	4. A Prototype lets chefs duplicate existing dishes quickly.
+	5. An Abstract Factory lets the chef prepare families of meals (e.g., vegetarian vs non-vegetarian).
+
+#Benefits
+
+	1. Reduces tight coupling between client and concrete classes.
+	2. Improves code flexibility for future changes.
+	3. Promotes reusability by centralizing object creation logic.
+	4. Supports scalability by making it easier to add new types of objects.
