@@ -1,1 +1,40 @@
+Proxy Design Pattern — Short Interview Answer
+
+	The Proxy Pattern is a Structural Design Pattern that provides a surrogate or placeholder 
+	for another object to control access to it.
+	It acts as a middle layer between the client and the real object, adding extra functionality 
+	like access control, caching, logging, or lazy initialization.
+
+#Key Idea:
+	The Proxy implements the same interface as the real subject and forwards requests to 
+	it—optionally performing some extra operations before or after the call.
+
+#Example:
+	A ProxyImage class loads an image from disk only when needed, while the client interacts with 
+	it as if it were a normal Image object.
+	Another example: InternetProxy that blocks access to certain websites.
+
+#Principles Used:
+	1. Encapsulation: Hides complexities or sensitive access behind the proxy.
+	2. Single Responsibility Principle (SRP): Proxy adds only control logic; the real object handles core behavior.
+	3. Open/Closed Principle (OCP): New proxy types can be added without modifying the real subject.
+
+#Types of Proxy:
+	1. Virtual Proxy: Delays expensive object creation (lazy loading).
+	2. Remote Proxy: Manages communication with remote objects.
+	3. Protection Proxy: Controls access rights to the real object.
+	4. Caching Proxy: Caches results for repeated requests.
+
+#When to Use:
+	When direct access to an object is expensive, restricted, or needs additional control.
+
+#Pros:
+	1. Adds extra behavior without changing the real object
+	2. Supports lazy loading, caching, logging, access control
+	3. Hides network or resource management details from client
+
+Cons:
+	1. Increases complexity and layers of abstraction
+	2. May add performance overhead
+	3. Requires careful synchronization if used in multithreaded contexts
 
