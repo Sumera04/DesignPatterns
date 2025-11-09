@@ -1,0 +1,33 @@
+Abstract Factory Design Pattern — Short Interview Answer
+
+	The Abstract Factory Pattern is a Creational Design Pattern that provides an interface 
+	for creating families of related objects without specifying their concrete classes.
+	It’s often called a “factory of factories.”
+
+#Key Idea:
+	Each concrete factory implements an abstract interface that creates multiple related 
+	objects (products) that are designed to work together.
+	The client only interacts with the abstract interfaces, not the concrete classes.
+
+#Example:
+	1. A GUIFactory can create related UI elements like Button and Checkbox.
+	2. WindowsFactory creates WindowsButton, WindowsCheckbox.
+	3. MacFactory creates MacButton, MacCheckbox.
+
+#Principles Used:
+	1. Dependency Inversion Principle (client depends on abstractions, not concrete implementations)
+	2. Open/Closed Principle (can add new product families without modifying existing code)
+	3. Encapsulation of object creation
+
+#When to Use:
+	When your system needs to create related or dependent objects that must be used together, 
+	and you want to ensure consistency among products.
+
+#Pros:
+	1. Ensures compatibility among related objects
+	2. Isolates product creation logic from client code
+	3. Makes it easy to introduce new product families
+
+#Cons:
+	1. Adding a new product type requires changing all factory classes
+	2. Increases complexity due to multiple factory hierarchies
