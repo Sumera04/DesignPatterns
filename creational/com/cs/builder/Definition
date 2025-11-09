@@ -1,1 +1,32 @@
+Builder Design Pattern — Short Interview Answer
 
+	The Builder Pattern is a Creational Design Pattern that separates the construction of 
+	a complex object from its representation, allowing you to create different types and 
+	representations of an object using the same construction process.
+
+#Key Idea:
+	Instead of using a complex constructor with many parameters, a Builder object constructs 
+	the final product step by step, offering better readability and flexibility.
+
+#Example:
+	Building a House with optional features like garage, garden, and swimmingPool.
+	You can use a HouseBuilder to construct different variants (e.g., LuxuryHouse, EcoHouse) step by step.
+
+#Principles Used:
+
+	1. Single Responsibility Principle (SRP): The builder handles object construction separately from representation.
+	2. Encapsulation: Hides complex construction logic from the client.
+	3. Open/Closed Principle (OCP): You can introduce new builders without changing existing client code.
+
+#When to Use:
+	When you need to create complex objects with optional or varying configurations, 
+	especially when many constructor parameters make the code hard to read.
+
+#Pros:
+	1. Makes object construction flexible and readable
+	2. Allows step-by-step creation and reuse of construction logic
+	3. Supports different representations of the same object
+
+#Cons:
+	1. Requires additional classes (builder, director)
+	2. Slightly increases code complexity for simple objects
