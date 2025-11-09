@@ -1,0 +1,79 @@
+Q&A – SOLID PRINCIPLES
+
+Q1: What are SOLID principles?
+A1: 
+
+SOLID principles are design principle which helps make software more maintainable, flexible, and scalable.
+SOLID stand for: 
+
+S – Single Responsibility Principle  
+“A class should have only one reason to change — meaning it should do just one thing.
+This keeps classes focused, easier to maintain, and testable.
+For example, a class that handles both data saving and validation should be split into two separate classes.”
+
+O – Open/Closed Principle  
+“Classes should be open for extension but closed for modification.
+You should be able to add new behavior without changing existing code.
+For example, adding a new payment method by creating a new class, not by modifying the existing PaymentProcessor.”
+
+L – Liskov Substitution Principle  
+“Subtypes must be replacable for their base types without altering the correctness of the program.
+ex. If class B is a subclass of class A, then you should be able to use B anywhere you use A — and your program 
+should still behave correctly.
+It ensures inheritance truly represents an ‘is-a’ relationship.
+For example, a Penguin shouldn’t extend Bird if it can’t fly — that breaks LSP.”
+
+I – Interface Segregation Principle  
+“Clients shouldn’t be forced to depend on methods they don’t use.
+It’s better to have multiple small, specific interfaces than one large, general one.
+For example, instead of one Machine interface with print, scan, fax — split it into separate Printer, Scanner,
+ and Fax interfaces.”
+
+Why it matters
+
+(When an interface has too many unrelated methods, implementing classes may be forced to define methods they 
+don’t need, leading to unnecessary complexity and maintenance issues.
+ISP helps you design cleaner, more modular interfaces — keeping classes focused and decoupled.)
+
+D – Dependency Inversion Principle  
+“High-level modules shouldn’t depend on low-level modules; both should depend on abstractions.
+This promotes loose coupling and flexibility.
+For example, a Service class should depend on a Repository interface, not a concrete Repository implementation.”
+
+Each principle helps make software more maintainable, flexible, and scalable.
+
+Q7: How do SOLID principles help in design patterns?
+A7:
+- SRP → Builder and Factory separate construction from business logic.
+- OCP → Strategy, Factory, and Decorator allow extension without modification.
+- LSP → Ensures polymorphism works correctly in inheritance.
+- ISP → Promotes clean interface design used in Abstract Factory or Adapter.
+- DIP → Encourages use of interfaces and DI frameworks.
+
+---------------------------------------------------------------
+
+Q8: Are SOLID principles always mandatory?
+A8:
+No. They are guidelines, not strict rules.
+Overusing them can make code unnecessarily complex.
+Use them where they improve maintainability and flexibility.
+
+---------------------------------------------------------------
+
+Q9: How can SOLID help in testability?
+A9:
+- SRP → Easier to mock and test isolated logic.
+- DIP → Allows mocking dependencies using interfaces.
+- ISP → Smaller interfaces mean simpler unit tests.
+
+---------------------------------------------------------------
+
+Q10: Can you give a real-world example showing multiple SOLID principles together?
+A10:
+Example: Notification System
+- SRP: EmailNotification handles only email logic.
+- OCP: Add new notification types (SMS, Push) without modifying old code.
+- LSP: Any Notification subclass can replace another.
+- ISP: Clients depend only on send() method they use.
+- DIP: Service depends on Notification interface, not concrete classes.
+

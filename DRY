@@ -1,0 +1,89 @@
+DRY Principle (Don’t Repeat Yourself)
+
+#Definition
+	DRY stands for “Don’t Repeat Yourself.”
+	It ensures each piece of knowledge exists in a single place, avoiding duplicated logic.
+	If the same logic appears multiple times, it becomes harder to maintain — if a change is needed, 
+	you must update it in multiple places, increasing the risk of inconsistency.
+
+#Objective
+
+	1. Reduce redundancy
+	2. Improve maintainability
+	3. Ensure consistency across the system
+	
+#Benefits
+
+	1. Simplifies maintenance: Update logic once, not everywhere.
+	2. Improves consistency: Reduces risk of mismatched behavior.
+	3. Increases readability: Smaller, cleaner, more modular code.
+	4. Encourages reuse: Promotes abstraction and modular design.
+
+#Detailed Explanation
+
+	The DRY principle encourages developers to extract common logic or configuration into a single reusable component
+	 — a method, class, or utility — so that updates happen in one place only.
+	
+	It’s not limited to code; it applies to database schema, configurations, and documentation as well.
+	
+	Violation Example
+	class Invoice {
+	    public double calculateTax(double amount) {
+	        return amount * 0.18; // 18% GST
+	    }
+	}
+	
+	class Receipt {
+	    public double calculateTax(double amount) {
+	        return amount * 0.18; // duplicated logic
+	    }
+	}
+	
+	
+	Here, the tax calculation logic is repeated in both classes.
+	If the tax rate changes, both places must be updated manually — violating the DRY principle.
+	
+	Correct Implementation
+	class TaxCalculator {
+	    public double calculateTax(double amount) {
+	        return amount * 0.18; // single source of truth
+	    }
+	}
+	
+	class Invoice {
+	    private TaxCalculator taxCalculator = new TaxCalculator();
+	    public double getTotal(double amount) {
+	        return amount + taxCalculator.calculateTax(amount);
+	    }
+	}
+	
+	class Receipt {
+	    private TaxCalculator taxCalculator = new TaxCalculator();
+	    public double getTotal(double amount) {
+	        return amount + taxCalculator.calculateTax(amount);
+	    }
+	}
+
+
+	✅ The logic for tax calculation is centralized in TaxCalculator.
+	✅ Any change in tax logic affects all users automatically.
+
+#Real-World Analogy
+
+	Imagine storing your friend’s phone number in five places — your phone, a notebook, a sticky note,
+	a spreadsheet, and an email draft.
+	If they change their number, you’d have to update it everywhere — tedious and error-prone.
+	Instead, store it in one authoritative source and refer to it when needed.
+
+#When to Be Careful
+
+	Over-applying DRY can lead to premature abstraction — merging code that only looks similar but serves different contexts.
+	In such cases, duplication is sometimes acceptable early on until clear patterns emerge.
+	
+	Balance DRY with clarity — “Don’t Repeat Yourself” doesn’t mean “Never Duplicate Code,” especially when it reduces readability.
+
+#Principles Related
+		Related Principle									Relationship
+	1. SRP (Single Responsibility Principle)	Both promote focused and modular design.
+	2. OCP (Open/Closed Principle)				DRY makes code easier to extend without modifying duplicated logic.
+	3. Encapsulation							Helps hide and reuse logic in a controlled way.
