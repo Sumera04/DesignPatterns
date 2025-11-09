@@ -1,1 +1,31 @@
+Facade Design Pattern — Short Interview Answer
+
+	The Facade Pattern is a Structural Design Pattern that provides a unified, 
+	simplified interface to a complex subsystem, making it easier for clients to interact with the system.
+
+#Key Idea:
+	The Facade class wraps multiple complex classes and exposes a single, easy-to-use interface 
+	that performs high-level operations, hiding the subsystem’s internal complexity.
+
+#Example:
+	A HomeTheaterFacade can provide a single method like watchMovie() that internally coordinates 
+	Projector, Amplifier, DVDPlayer, and Lights classes.
+
+#Principles Used:
+	1. Encapsulation: Hides subsystem complexity behind a simple interface.
+	2. Single Responsibility Principle (SRP): Facade handles communication between client and subsystems.
+	3. Dependency Inversion Principle (DIP): Client depends on Facade abstraction, not subsystem details.
+
+#When to Use:
+	When you want to simplify interactions with complex systems or provide a single entry 
+	point to a layered system (e.g., APIs, frameworks, libraries).
+
+#Pros:
+	1. Simplifies client usage of complex systems
+	2. Reduces coupling between client and subsystem classes
+	3. Improves code readability and maintainability
+
+#Cons:
+	1. Can become a god object if it grows too large
+	2. May hide necessary details that advanced clients might need
 
