@@ -1,1 +1,29 @@
+Structural Design Patterns
+ 
+#Definition
+ 
+	Structural design patterns are design patterns that deal with object composition and relationships, 
+	helping to form larger structures from individual objects while keeping them flexible and efficient.
 
+	In other words, they focus on how classes and objects are composed to build complex structures, 
+	rather than how they are created (which is the focus of creational patterns).
+ 
+#Objective
+
+	1. Simplify relationships between objects
+	2. Promote reusability and flexibility
+	3. Make it easier to change or extend system structure without major refactoring
+
+#Real-World Analogy
+ 
+	Think of building blocks or LEGO bricks: individual blocks can be combined in different ways 
+	to build complex structures, and structural patterns show the best ways to connect or decorate 
+	these blocks efficiently.
+ 
+#Benefits
+ 
+	1. Promotes code reusability
+	2. Simplifies complex systems
+	3. Enables flexible and maintainable object composition
+	4. Reduces tight coupling between classes
+ 
