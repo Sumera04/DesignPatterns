@@ -1,1 +1,27 @@
+Prototype Design Pattern — Short Interview Answer
+	
+	The Prototype Pattern is a Creational Design Pattern that allows you to create new objects by cloning existing ones instead of creating them from scratch.
+	It’s used when object creation is costly or complex, and you want to avoid reinitializing the same data repeatedly.
+
+#Key Idea:
+	Define a prototype interface with a clone() method. Objects that implement it can copy themselves to produce new instances.
+
+#Example:
+	Creating multiple copies of a Document or Shape object with the same properties but independent states.
+
+#Principles Used:
+	1. Avoids direct instantiation (reduces coupling to concrete classes)
+	2. Promotes flexibility by cloning existing instances
+
+#When to Use:
+	When object creation is expensive, repetitive, or dependent on complex configuration.
+
+#Pros:
+	1. Reduces overhead of creating complex objects
+	2. Simplifies object creation logic
+	3. Cloning can include or exclude deep object properties
+
+#Cons:
+	1. Deep copy implementation can be complex
+	2. Cloning may break encapsulation if not carefully handled
 
