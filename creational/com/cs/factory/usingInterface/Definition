@@ -1,0 +1,31 @@
+Factory Method Design Pattern — Short Interview Answer
+
+	The Factory Method Pattern is a Creational Design Pattern that provides an interface for creating objects,
+	but lets subclasses decide which class to instantiate.
+	It helps in creating objects without exposing the creation logic to the client.
+
+#Key Idea:
+	Define a method (factory) that returns an object of a common interface or abstract class, allowing 
+	subclasses to decide the concrete type.
+
+#Example:
+	A `ShapeFactory` class that creates `Circle`, `Rectangle`, or `Square` objects based on input — 
+	the client only interacts with the `Shape` interface.
+
+#Principles Used:
+	1. Encapsulation of object creation logic
+	2. Open/Closed Principle (new products can be added without changing existing code)
+	3. Dependency Inversion Principle (client depends on abstractions, not concrete classes)
+
+#When to Use:
+	When object creation involves logic or conditions that shouldn’t be exposed to the client, 
+	or when you want to delegate instantiation to subclasses.
+
+#Pros:
+	1. Centralizes and controls object creation
+	2. Reduces tight coupling between client and concrete classes
+	3. Improves code maintainability and scalability
+
+#Cons:
+	1. Adds extra classes and complexity
+	2. Can lead to subclass explosion if not managed well
