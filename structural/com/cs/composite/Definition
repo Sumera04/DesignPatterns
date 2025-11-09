@@ -1,1 +1,35 @@
+#Composite Design Pattern — Short Interview Answer
 
+	The Composite Pattern is a Structural Design Pattern that lets you treat individual objects and 
+	groups of objects uniformly.
+	It’s used to represent part-whole hierarchies, such as an organization chart or file system.
+
+#Key Idea:
+	Both simple objects (leaves) and complex objects (composites) implement the same interface, 
+	allowing clients to perform common operations (like showDetails() or display()) without 
+	worrying about whether they’re dealing with one object or a group.
+
+#Example:
+	In a company hierarchy, a Manager (composite) can contain multiple Employees (leaves), 
+	but both expose the same method like showDetails().
+
+#Principles Used:
+
+	1. Composition over inheritance
+	2. Open/Closed Principle
+	3. Liskov Substitution Principle
+
+#When to Use:
+	When your system involves tree-like structures and you want to treat all nodes (individual or groups) 
+	the same way.
+
+#Pros:
+
+	1. Uniformity between leaf and composite
+	2. Simplifies client code
+	3. Easy to extend
+
+#Cons:
+
+	1. Can make design overly general
+	2. May allow invalid operations on leaf nodes
