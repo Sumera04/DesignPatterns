@@ -1,1 +1,30 @@
+Adapter Design Pattern — Short Interview Answer
 
+	The Adapter Pattern is a Structural Design Pattern that allows incompatible interfaces to work together by acting as a bridge between them.
+	It converts one interface into another that a client expects, without modifying existing code.
+
+#Key Idea:
+	The Adapter wraps an existing class (the adaptee) and translates its interface to match the one the client needs.
+
+#Example:
+	An AudioPlayer supports only MP3, but using a MediaAdapter, it can also play VLC or MP4 files.
+
+#Principles Used:
+
+	1. Single Responsibility Principle (adapter only converts interface)
+	2. Open/Closed Principle (existing classes aren’t modified)
+	3. Dependency Inversion Principle (client depends on abstraction, not concrete class)
+
+#When to Use:
+	When you want to reuse existing classes that don’t match the required interface.
+
+#Pros:
+
+	1. Enables integration of incompatible interfaces
+	2. Promotes code reuse
+	3. Reduces coupling between systems
+
+#Cons:
+
+	1. Adds an extra layer of abstraction
+	2. May make code harder to understand due to additional wrapping
