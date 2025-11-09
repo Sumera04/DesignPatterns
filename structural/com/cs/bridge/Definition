@@ -1,1 +1,32 @@
+#Bridge Design Pattern — Short Interview Answer
 
+	The Bridge Pattern is a Structural Design Pattern that separates an abstraction 
+	from its implementation so that both can evolve independently.
+
+#Key Idea:
+	Instead of binding an abstraction (like Shape) and its implementation (like DrawingAPI) 
+	through inheritance, the Bridge pattern uses composition — the abstraction “has-a” reference to the implementation.
+
+#Example:
+	A Circle (abstraction) can use different rendering APIs (OpenGLAPI, DirectXAPI) without changing its code.
+
+#Principles Used:
+
+	1. Composition over inheritance
+	2. Open/Closed Principle
+	3. Single Responsibility Principle
+	4. Dependency Inversion Principle
+
+#When to Use:
+	When you have multiple dimensions of variation (e.g., shape type and rendering type) 
+	and want to avoid a class explosion of combinations.
+
+#Pros:
+
+	1. Abstraction and implementation can change independently
+	2. Reduces subclass proliferation
+	3. Improves flexibility and maintainability
+
+#Cons:
+
+	Increases complexity (more interfaces and classes)
