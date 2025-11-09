@@ -1,1 +1,32 @@
+Behavioral Design Patterns
+#Definition
 
+	Behavioral design patterns deals with communication and responsibility between objects.
+	They focus on how objects interact, how responsibilities are assigned, and how algorithms 
+	or workflows are implemented in a flexible way.
+
+	In other words, behavioral patterns define the way objects collaborate to achieve a task, 
+	making the system more maintainable and extensible.
+
+#Objective
+
+	1. Define clear responsibilities between objects.
+	2. Promote loose coupling by encapsulating how objects communicate.
+	3. Simplify complex control flows or algorithms by distributing behavior.
+	4. Enable flexible and reusable interactions between objects.
+	
+#Real-World Analogy
+
+	Think of an office workflow system:
+	
+	Observer: Employees get notified when the manager posts updates.
+	Strategy: Different employees use different strategies to handle tasks.
+	Command: Requests for approvals are encapsulated and can be queued or undone.
+	Mediator: HR manages communication between departments to avoid direct messaging.
+
+#Benefits
+	
+	1. Promotes loose coupling between interacting objects.
+	2. Makes algorithms and workflows reusable and flexible.
+	3. Simplifies complex behavior and control flow in a system.
+	4. Improves maintainability and readability of interactions.
