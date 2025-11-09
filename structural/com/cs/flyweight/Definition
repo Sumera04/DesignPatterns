@@ -1,1 +1,33 @@
+Flyweight Design Pattern — Short Interview Answer
 
+	The Flyweight Pattern is a Structural Design Pattern that helps minimize memory usage by 
+	sharing common data between multiple objects instead of storing duplicate data in each one.
+
+#Key Idea:
+	Separate the object’s state into:
+	Intrinsic state – shared, immutable data (stored in Flyweight).
+	Extrinsic state – context-specific data (supplied by the client).
+	This allows sharing the intrinsic part across many fine-grained objects.
+
+#Example:
+	In a text editor, each character object shares the same font and style data (intrinsic), 
+	while its position in the document (extrinsic) is stored separately.
+
+#Principles Used:
+	1. Memory Optimization via Object Sharing
+	2. Single Responsibility Principle (SRP): Flyweight stores only shared data; context holds unique data.
+	3. Encapsulation: Client manages external state, flyweight hides internal details.
+
+#When to Use:
+	When you have a large number of similar objects that cause high memory usage, and 
+	many of them share common data.
+
+#Pros:
+	1. Reduces memory footprint significantly
+	2. Improves performance for large-scale object creation
+	3. Encourages data sharing and reusability
+
+Cons:
+	1. Increased code complexity (splitting intrinsic/extrinsic state)
+	2. Requires careful management of external state
+	3. Harder to debug due to shared mutable data risks
