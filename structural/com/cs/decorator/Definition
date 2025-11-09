@@ -1,1 +1,30 @@
+Decorator Design Pattern — Short Interview Answer
+	The Decorator Pattern is a Structural Design Pattern that lets you dynamically add new behavior 
+	or responsibilities to an object without modifying its existing code or subclassing it.
+
+#Key Idea:
+	Wrap the original object inside another object (decorator) that adds extra functionality while 
+	keeping the same interface.
+	Multiple decorators can be stacked for layered behavior.
+
+#Example:
+	A Coffee object can be wrapped by decorators like MilkDecorator, SugarDecorator, 
+	or WhipCreamDecorator to add features dynamically without altering the base Coffee class.
+
+#Principles Used:
+	1. Open/Closed Principle (OCP): You can extend functionality without modifying existing classes.
+	2. Single Responsibility Principle (SRP): Each decorator adds one specific behavior.
+	3. Composition over Inheritance: Decorators use object composition rather than subclassing.
+
+#When to Use:
+	When you need to add responsibilities to individual objects at runtime rather than to an entire class hierarchy.
+
+#Pros:
+	1. Adds or removes functionality at runtime
+	2. Avoids large subclass hierarchies
+	3. Promotes code reusability and flexibility
+
+#                                                                                                              Cons:
+	1. Can lead to many small objects (complex debugging)
+	2. Order of decorators may affect behavior
 
