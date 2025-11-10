@@ -1,1 +1,32 @@
+Mediator Design Pattern — Short Interview Answer
 
+	The Mediator Pattern is a Behavioral Design Pattern that centralizes communication between multiple 
+	objects (colleagues) so that they don’t communicate directly, reducing dependencies and tight coupling.
+
+#Key Idea:
+	Instead of objects calling each other directly, they interact through a mediator that controls and 
+	coordinates their communication.
+
+#Example:
+	An air traffic control system — all airplanes (colleagues) communicate only with the control 
+	tower (mediator), not with each other.
+
+#Principles Used:
+	1. Loose Coupling: Reduces direct dependencies between communicating objects.
+	2. Single Responsibility Principle: Each colleague focuses on its core logic; the mediator handles coordination.
+	3. Open/Closed Principle: You can add new colleagues without modifying others.
+
+#When to Use:
+	When you have many interacting objects with complex communication logic that would otherwise lead to 
+	tight coupling or spaghetti code.
+
+#Pros:
+	1. Reduces complexity of object interconnections.
+	2. Centralizes communication control.
+	3. Improves maintainability and scalability.
+
+#Cons:
+	1.The mediator can become overly complex if it takes on too much logic.
+
+#Real-World Analogy:
+	A chat room — users (colleagues) don’t message each other directly; the chat server (mediator) routes all messages.
