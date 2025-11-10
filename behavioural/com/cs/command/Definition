@@ -1,1 +1,36 @@
+Command Design Pattern — Short Interview Answer
 
+	The Command Pattern is a Behavioral Design Pattern that encapsulates a request as an object, 
+	allowing you to parameterize, queue, undo, or log operations independently of the object that invokes them.
+
+#Key Idea:
+	It separates the sender (who issues a request) from the receiver (who performs the action) by 
+	introducing a command object that represents the request.
+
+#Example:
+	A remote control sends commands like TurnOnLight or TurnOffTV.
+	Each button press is mapped to a command object that knows which receiver to act upon.
+
+#Principles Used:
+	1. Single Responsibility Principle: Each command represents one action.
+	2. Open/Closed Principle: New commands can be added without changing existing code.
+	3. Decoupling: The invoker doesn’t need to know the action details.
+
+#When to Use:
+	When you need to decouple senders from receivers, support undo/redo, or queue requests 
+	(e.g., GUI buttons, transaction systems).
+
+#Pros:
+
+	1. Enables undo/redo functionality.
+	2. Supports command queuing, logging, and macros.
+	3. Promotes loose coupling between invoker and receiver.
+
+#Cons:
+	
+	1. Increases the number of classes.
+	2. Can be complex for simple operations.
+
+#Real-World Analogy:
+	A waiter taking an order — the waiter (invoker) doesn’t cook, just passes the command (order) 
+	to the chef (receiver), who executes it.
