@@ -1,0 +1,128 @@
+Dependency Injection — Short Interview Answer
+
+#Concept:
+	Dependency Injection (DI) is a design technique (not a GoF pattern) used to decouple object creation 
+	from object usage.
+	Instead of a class creating its own dependencies, they are “injected” from outside, usually by a 
+	framework or container.
+
+#Key Idea:
+	“Don’t call us, we’ll call you.” — The class declares what it needs, and the DI framework provides it.
+
+#Example:
+	// Without DI (tight coupling)
+	class Service {
+	   private Repository repo = new Repository();
+	}
+	
+	// With DI (loose coupling)
+	class Service {
+	   private Repository repo;
+	   Service(Repository repo) { this.repo = repo; }
+	}
+
+	Here, Repository is injected into Service via constructor injection.
+
+#Principles Followed
+	1. Dependency Inversion Principle (DIP): High-level modules should depend on abstractions, 
+	not concrete classes.
+	2. Single Responsibility Principle (SRP): Class focuses on behavior, not object creation.
+
+#Types of DI
+	1. Constructor Injection – dependencies passed via constructor (most common).
+	2. Setter Injection – dependencies set via setter methods.
+	3. Interface Injection – less common; uses interface method for injection.
+
+#Benefits
+	1. Promotes loose coupling
+	2. Improves testability (mock dependencies easily)
+	3. Enables easier maintenance and scalability
+
+#Real-World Analogy
+	A chef doesn’t buy ingredients himself — the supplier (DI container) provides them when needed.
+	
+#Common questions
+	1. What problem does Dependency Injection solve?
+
+	Answer:
+	Dependency Injection solves the problem of tight coupling between classes.
+	Instead of a class creating its own dependencies (making it hard to test or change), 
+	DI lets an external component provide those dependencies — improving flexibility, testability, 
+	and maintainability.
+	
+	Example:
+	Without DI, a class directly creates new Repository(). With DI, it just declares a Repository interface 
+	and lets the container inject an implementation.
+	
+	2. How does DI relate to the Dependency Inversion Principle (DIP)?
+	
+	Answer:
+	DI is the practical implementation of the Dependency Inversion Principle (the “D” in SOLID).
+	
+	DIP says: High-level modules should depend on abstractions, not concrete classes.
+	
+	DI enforces this by injecting abstractions (interfaces) into classes, so high-level modules aren’t 
+	aware of how dependencies are created.
+	
+	In short:
+	
+	DIP is the principle — DI is the mechanism.
+	
+	3. What are the different ways to inject dependencies?
+	
+	Answer:
+	There are three common types of Dependency Injection:
+	
+	Constructor Injection:
+	
+	Dependencies provided via class constructor.
+	
+	Most common and preferred in Spring.
+	
+	class Service {
+	    private Repository repo;
+	    public Service(Repository repo) { this.repo = repo; }
+	}
+	
+	
+	Setter Injection:
+	
+	Dependencies provided via setter methods.
+	
+	service.setRepository(repo);
+	
+	
+	Interface Injection (rare):
+	
+	An interface defines a method to inject dependencies.
+	
+	Not common in Java, but used in some legacy frameworks.
+	
+	4. How is DI implemented in the Spring Framework?
+	
+	Answer:
+	Spring provides automatic dependency injection through its IoC (Inversion of Control) container.
+	You define dependencies using:
+	
+	Annotations: @Autowired, @Inject, @Qualifier
+	
+	XML configuration (legacy)
+	
+	Java-based configuration (@Bean, @Configuration)
+	
+	Spring resolves and injects dependencies at runtime, managing object lifecycles and scopes automatically.
+	
+	5. What is the difference between DI and Factory Pattern?
+	
+	Answer:
+	
+	Aspect	Dependency Injection	Factory Pattern
+	Who creates the object?	External container or framework	Factory class itself
+	Purpose	To decouple creation and usage of dependencies	To centralize object creation logic
+	Control	Inversion of control – objects are provided automatically	Client requests objects from factory
+	Example	Spring injecting a UserService	Factory creating a Shape object
+	
+	Summary:
+	
+	Factory decides how to create objects.
+	DI decides who supplies them and when.

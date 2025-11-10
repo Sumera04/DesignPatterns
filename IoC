@@ -1,0 +1,58 @@
+Inversion of Control (IoC) — Short Interview Answer
+
+#Concept:
+	Inversion of Control (IoC) is a design principle that inverts the flow of control in a program.
+	Instead of your code controlling object creation and workflow, a framework or container takes 
+	over that responsibility.
+
+	You don’t call the framework — the framework calls you.
+
+#Problem It Solves:
+	It removes tight coupling between components by delegating control of object creation, configuration, 
+	and lifecycle to an external system.
+
+#Relation to Dependency Injection (DI):
+	IoC is the broader concept — any mechanism where control is handed to a framework.
+	Dependency Injection is one specific way to achieve IoC (by injecting dependencies at runtime).
+
+	In short:
+
+	IoC = principle
+	DI = implementation technique of IoC
+
+#Example:
+	Without IoC:
+	
+	Service service = new Service(new Repository());
+	
+	With IoC (e.g., Spring Framework):
+	
+	@Service
+	public class Service {
+	   @Autowired
+	   private Repository repo;
+	}
+	
+	Here, the Spring container creates and injects Repository automatically — the code doesn’t manage it.
+
+#Benefits:
+1. Promotes loose coupling
+2. Improves testability and flexibility
+3. Enables framework-driven lifecycle management
+
+#Common Interview Questions & Answers
+
+Q1: What is IoC in simple terms?
+A1: It means the control of object creation and flow is inverted — given to the framework instead of the application code.
+
+Q2: How is IoC implemented in Spring?
+A2: Through the Spring IoC Container, which manages bean creation, dependency injection, and lifecycle using annotations (@Autowired, @Component) or configuration files.
+
+Q3: Difference between IoC and DI?
+A3: IoC is the concept; DI is a technique to achieve it. All DI is IoC, but not all IoC is DI (e.g., event callbacks are also IoC).
+
+Q4: Why is IoC important?
+A4: It decouples code, making systems more modular, easier to test, and maintainable.
+
+Q5: Real-world analogy:
+A restaurant kitchen — chefs (your code) don’t buy ingredients or schedule deliveries; the manager (IoC container) controls who gets what and when.
