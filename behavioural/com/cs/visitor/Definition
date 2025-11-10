@@ -1,1 +1,29 @@
+Visitor Design Pattern — Short Interview Answer
 
+	The Visitor Pattern is a Behavioral Design Pattern that lets you add new operations to existing 
+	object structures without modifying their classes. It achieves this by using a visitor object 
+	that performs operations on elements of an object structure via double dispatch.
+
+#Key Idea:
+	Keep the data structure (elements) and the operations (visitors) separate so that you can add new operations easily.
+
+#Example:
+	A shopping cart where books, fruits, and clothes calculate prices differently using a visitor class.
+
+#Principles Used:
+	1. Open/Closed Principle: Add new operations without changing existing classes.
+	2. Single Responsibility Principle: Elements hold data; visitors define behavior.
+
+#When to Use:
+	When the class structure is stable, but you need to add operations frequently.
+
+#Pros:
+	1. Easy to add new operations.
+	2. Centralizes behavior related to a set of classes.
+
+#Cons:
+	1. Adding new element types requires updating all visitors.
+
+#Real-World Analogy:
+	A customs officer (visitor) inspects different items (elements) — each item accepts the visitor, 
+	and the visitor applies inspection logic based on the item type.
