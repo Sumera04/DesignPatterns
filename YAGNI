@@ -1,0 +1,22 @@
+YAGNI Principle — “You Aren’t Gonna Need It”
+
+#Definition:
+	A core Agile and Extreme Programming (XP) principle that says:
+	Don’t add functionality until it is necessary.
+
+#Key Idea:
+	Avoid writing code for hypothetical future needs. Focus only on what the current requirements demand.
+
+#Example:
+	You think users might want dark mode later, so you build a theme engine now — YAGNI violation.
+
+#Benefits:
+	1. Keeps codebase simple and maintainable
+	2. Reduces technical debt
+	3. Saves development time
+
+#When to Use:
+	Always — unless the future feature is absolutely confirmed and imminent.
+
+#Real-World Analogy:
+	You don’t build a swimming pool just because you might learn swimming next year.
