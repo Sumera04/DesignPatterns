@@ -1,1 +1,30 @@
+Interpreter Design Pattern — Short Interview Answer
 
+	The Interpreter Pattern is a Behavioral Design Pattern that defines a grammar for a language and 
+	uses interpreter objects to interpret (evaluate) sentences in that language.
+
+#Key Idea:
+	Represent rules of a simple language as classes, where each class interprets a specific part 
+	of the grammar (like terminal or non-terminal expressions).
+
+#Example:
+	A rule-based command processor (e.g., “A AND B” or “A OR B”) that interprets and evaluates logical expressions.
+
+#Principles Used:
+	1. Single Responsibility Principle: Each expression class handles one grammar rule.
+	2. Open/Closed Principle: You can extend grammar by adding new expression classes.
+
+#When to Use:
+	When you have to parse and evaluate expressions defined by a simple grammar — such as configuration 
+	scripts, mathematical formulas, or search filters.
+
+#Pros:
+	1. Easy to change or extend grammar.
+	2. Makes the language structure explicit.
+
+#Cons:
+	Complex grammars lead to many small classes, making it hard to maintain.
+
+#Real-World Analogy:
+	A language translator — each word (terminal expression) and rule (non-terminal expression) is 
+	interpreted according to grammar to produce meaning.
