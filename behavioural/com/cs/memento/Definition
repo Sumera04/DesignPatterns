@@ -1,0 +1,27 @@
+Memento Design Pattern — Short Interview Answer
+
+	The Memento Pattern is a Behavioral Design Pattern that lets you capture and restore an object’s internal state without exposing its internal details. It’s commonly used to implement undo/redo or rollback functionality.
+
+#Key Idea:
+	Save the state of an object (Originator) in a separate Memento object, and let a Caretaker manage these snapshots for later restoration.
+
+#Example:
+	A text editor saves document versions — pressing Ctrl+Z restores the previous state.
+
+#Principles Used:
+	1. Encapsulation: Internal state is stored privately in the Memento.
+	2. Single Responsibility Principle: Each class (Originator, Memento, Caretaker) has one role.
+
+#When to Use:
+	When you need to implement undo/redo, checkpoints, or version history without breaking encapsulation.
+
+#Pros:
+	1. Enables safe state restoration.
+	2. Preserves object encapsulation.
+
+Cons:
+	1. Can increase memory usage with many snapshots.
+
+
+#Real-World Analogy:
+	A video game’s save game feature — restores the exact state of the game when reloaded.

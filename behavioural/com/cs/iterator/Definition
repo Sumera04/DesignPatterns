@@ -1,1 +1,29 @@
+Iterator Design Pattern — Short Interview Answer
 
+	The Iterator Pattern is a Behavioral Design Pattern that provides a standard way to access elements of a collection sequentially without exposing its underlying representation (like array, list, or tree).
+
+#Key Idea:
+	It separates the traversal logic from the collection object, allowing different ways to iterate over the same data structure.
+
+#Example:
+	A BookCollection class provides an Iterator to access each Book object one by one, without exposing internal storage details.
+
+#Principles Used:
+
+	1. Single Responsibility Principle: Iterator handles traversal, collection handles data.
+	2. Encapsulation: Internal structure of the collection remains hidden.
+
+#When to Use:
+	When you need to traverse complex data structures without exposing their internals or when you want multiple ways to iterate over a collection.
+
+#Pros:
+	1. Simplifies traversal of complex structures.
+	2. Supports multiple simultaneous traversals.
+	3. Promotes encapsulation and clean separation of concerns.
+
+#Cons:
+	1. Adds extra classes.
+	2. Can be less efficient for very simple collections.
+
+#Real-World Analogy:
+	A TV remote — you can move channel by channel without knowing how the channels are stored inside the TV.
