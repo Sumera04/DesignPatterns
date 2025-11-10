@@ -1,1 +1,34 @@
+Observer Design Pattern — Short Interview Answer
+	The Observer Pattern is a Behavioral Design Pattern that defines a one-to-many 
+	dependency between objects so that when one object (the Subject) changes its state, 
+	all its dependent objects (Observers) are automatically notified and updated.
 
+#Key Idea:
+	The Subject maintains a list of observers and notifies them of any state change — typically 
+	by calling their update() method.
+
+#Example:
+	In a stock price app, when the stock value changes (Subject), all registered displays or 
+	users (Observers) get real-time updates.
+
+#Principles Used:
+	1. Loose Coupling: Subject and observers interact through an interface, not concrete classes.
+	2. Open/Closed Principle: New observers can be added without modifying existing code.
+	3. Dependency Inversion Principle: Both Subject and Observer depend on abstractions.
+
+#When to Use:
+	When multiple objects need to stay in sync with the state of another object, such as in 
+	event-driven systems, GUIs, or notification systems.
+
+#Pros:
+	1. Promotes loose coupling between Subject and Observers
+	2. Automatically propagates state changes
+	3. Easy to add new observers
+
+#Cons:
+	1. Can cause unexpected updates if observers are not managed properly
+	2. Order of notification can become unpredictable
+
+#Real-World Analogy:
+	You subscribe to a YouTube channel — whenever the creator uploads a video, all subscribers (observers) 
+	are notified automatically.
