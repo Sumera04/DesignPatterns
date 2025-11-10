@@ -1,1 +1,33 @@
+State Design Pattern — Short Interview Answer
 
+	The State Pattern is a Behavioral Design Pattern that allows an object to change its behavior 
+	dynamically when its internal state changes — as if the object’s class itself changed.
+
+#Key Idea:
+	It encapsulates state-specific behavior into separate classes, and the context delegates behavior
+	 to the current state object.
+
+#Example:
+	A traffic light changes behavior (Red → Yellow → Green) based on its current state.
+	Similarly, a media player behaves differently in Play, Pause, or Stop states.
+
+#Principles Used:
+	1. Single Responsibility Principle: Each state handles one behavior type.
+	2. Open/Closed Principle: New states can be added without modifying existing code.
+	3. Encapsulation: State-specific logic is localized in its class.
+
+#When to Use:
+	When an object’s behavior depends on its state, and it must change behavior at runtime without large conditionals.
+
+#Pros:
+	1. Eliminates long if-else/switch statements.
+	2. Makes transitions and behavior easy to maintain.
+	3. Improves code readability and scalability.
+
+#Cons:
+	1. Introduces many small classes.
+	2. Can be overkill for simple scenarios.
+
+#Real-World Analogy:
+	A vending machine — its behavior changes depending on whether it’s waiting for coins, dispensing an item, 
+	or out of stock.
