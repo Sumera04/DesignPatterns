@@ -1,1 +1,36 @@
+Chain of Responsibility Design Pattern — Short Interview Answer
+	The Chain of Responsibility Pattern is a Behavioral Design Pattern that allows a request 
+	to be passed along a chain of handlers, where each handler decides whether to process the 
+	request or pass it to the next one in the chain.
 
+#Key Idea:
+	Decouple senders and receivers — the sender doesn’t know which handler will handle the request. 
+	Each handler only knows its successor in the chain.
+
+Example:
+	A logging system where requests go through multiple loggers (ErrorLogger → FileLogger → ConsoleLogger), 
+	and each decides whether to handle or forward the message.
+	Another example: a support system where requests move from “Level 1 Support” to “Level 2” to “Manager.”
+
+#Principles Used:
+
+1. Single Responsibility Principle (SRP): Each handler focuses on one type of request.
+2. Open/Closed Principle (OCP): New handlers can be added without changing existing ones.
+3. Loose Coupling: Sender and receivers are decoupled — only linked through the chain.
+
+#When to Use:
+	When multiple objects might handle a request, and you don’t want the sender to know which one will handle it.
+
+#Pros:
+	1. Promotes flexibility and decoupling between sender and receiver.
+	2. Easy to add or reorder handlers.
+	3. Reduces if-else chains or switch statements.
+
+
+#Cons:
+	1. Request may go unhandled if no handler processes it.
+	2. Can be hard to debug if the chain is long or dynamic.
+
+#Real-World Analogy:
+	Customer service escalation — your complaint goes from customer care → supervisor → manager 
+	until someone resolves it.
