@@ -1,1 +1,34 @@
+Template Method Design Pattern — Short Interview Answer
+	The Template Method Pattern is a Behavioral Design Pattern that defines the skeleton of an 
+	algorithm in a base class while allowing subclasses to override specific steps without changing 
+	the overall structure.
 
+#Key Idea:
+	The parent class provides a template method that outlines a fixed sequence of steps. Subclasses 
+	implement or customize individual steps.
+
+#Example:
+	A DataProcessor class defines the flow: loadData() → parseData() → processData() → saveData().
+	Subclasses like CSVDataProcessor and JSONDataProcessor provide their own implementations for these steps.
+
+#Principles Used:
+1. Open/Closed Principle: Base algorithm is fixed; steps can be customized via subclassing.
+2. Hollywood Principle: “Don’t call us, we’ll call you” — parent class controls the sequence.
+3. Inversion of Control: Parent decides when subclass methods are called.
+
+#When to Use:
+	When multiple classes follow the same process structure but differ in certain steps 
+	(e.g., data parsing, report generation).
+
+#Pros:
+1. Promotes code reuse and consistency.
+2. Reduces duplication across similar algorithms.
+3. Enforces a standard process flow.
+
+#Cons:
+1. Relies on inheritance, limiting runtime flexibility.
+2. Harder to modify if algorithm steps become too interdependent.
+
+#Real-World Analogy:
+	A cooking recipe template — steps like “prepare”, “cook”, and “serve” are fixed, but each dish 
+	customizes them differently.
