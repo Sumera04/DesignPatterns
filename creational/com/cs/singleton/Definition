@@ -1,9 +1,11 @@
 Singleton Design Pattern — Short Interview Answer
 	
-	The Singleton Pattern is a Creational Design Pattern that ensures only one instance of a class exists throughout the application and provides a global access point to it.
+	The Singleton Pattern is a Creational Design Pattern that ensures only one instance of a class 
+	exists throughout the application and provides a global access point to it.
 
 #Key Idea:
-	Restrict class instantiation by making the constructor private and exposing a static method that returns the same instance every time.
+	Restrict class instantiation by making the constructor private and exposing a static method that 
+	returns the same instance every time.
 
 #Example:
 	A DatabaseConnection or Logger class where having multiple instances could cause conflicts or inefficiency.

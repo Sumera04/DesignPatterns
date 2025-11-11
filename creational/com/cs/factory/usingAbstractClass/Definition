@@ -9,8 +9,8 @@ Factory Method Design Pattern — Short Interview Answer
 	subclasses to decide the concrete type.
 
 #Example:
-	A `ShapeFactory` class that creates `Circle`, `Rectangle`, or `Square` objects based on input — 
-	the client only interacts with the `Shape` interface.
+	A `DocumentFactory` class that creates `Word`, `PDF`, or `Excel` document objects based on input — 
+	the client only interacts with the `DocumentFactory` interface.
 
 #Principles Used:
 	1. Encapsulation of object creation logic

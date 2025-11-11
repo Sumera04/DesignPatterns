@@ -59,7 +59,8 @@ Q4: What is the main advantage?
 A4: It removes the need for large conditional logic and promotes flexible handler combinations.
 
 Q5: When to use it?
-A5: When multiple objects can handle a request, and the exact handler isn’t known in advance (e.g., event handling, logging, approval workflows).
+A5: When multiple objects can handle a request, and the exact handler isn’t known in 
+	advance (e.g., event handling, logging, approval workflows).
 
 Q6: Common disadvantage?
 A6: If no handler processes the request, it may go unhandled. Debugging long chains can also be tricky.

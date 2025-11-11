@@ -19,7 +19,8 @@ Cons:
 2. Slower compared to parser generators for complex languages.
 
 Real-World Analogy:
-- Language Translator: Each word (terminal) and grammar rule (non-terminal) knows how to interpret itself to produce meaning.
+- Language Translator: Each word (terminal) and grammar rule (non-terminal) knows how to interpret 
+  itself to produce meaning.
 - Calculator: Each operation (+, -, AND, OR) interprets its result based on input expressions.
 */
 
@@ -54,7 +55,8 @@ Q1: What is the Interpreter Pattern?
 A1: It defines a grammar for a language and provides an interpreter to evaluate expressions written in that language.
 
 Q2: When to use the Interpreter Pattern?
-A2: When you have a simple, well-defined grammar that needs to be parsed or evaluated frequently (e.g., calculators, search filters, configuration rules).
+A2: When you have a simple, well-defined grammar that needs to be parsed or evaluated 
+frequently (e.g., calculators, search filters, configuration rules).
 
 Q3: What are Terminal and Non-Terminal Expressions?
 A3: 

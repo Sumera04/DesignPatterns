@@ -41,10 +41,12 @@ public class StateDemo {
 /* Interview Q&A:
 
 Q1: What is the State Pattern?
-A1: It allows an object to change its behavior dynamically when its internal state changes, appearing as if the object’s class has changed.
+A1: It allows an object to change its behavior dynamically when its internal state changes, 
+appearing as if the object’s class has changed.
 
 Q2: How does it differ from Strategy Pattern?
-A2: In Strategy, behavior is selected by the client at runtime; in State, the context changes behavior automatically as state changes.
+A2: In Strategy, behavior is selected by the client at runtime; in State, the context changes 
+behavior automatically as state changes.
 
 Q3: Which SOLID principles does it follow?
 A3: SRP (each state has one responsibility), OCP (add new states without changing existing code).

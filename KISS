@@ -2,7 +2,8 @@ KISS Principle (Keep It Simple, Stupid)
 
 #Definition
 
-	The KISS Principle states that systems and code should be kept as simple as possible, avoiding unnecessary complexity.
+	The KISS Principle states that systems and code should be kept as simple as possible, 
+	avoiding unnecessary complexity.
 	Simpler designs are easier to understand, maintain, and extend.
 
 #Objective
